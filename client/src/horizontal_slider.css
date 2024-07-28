@@ -1,0 +1,107 @@
+.container {
+  justify-content: space-around;
+
+}
+
+.main {
+  flex-flow: nowrap !important;
+
+  padding-bottom: 20px;
+
+  vertical-align: middle;
+  /* display: inline-block; */
+
+  scrollbar-width: thin;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+}
+
+
+.prev2,
+.next2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+  transition: 0.6s linear;
+  vertical-align: middle;
+}
+
+
+.next2 {
+  margin-left: 5px;
+  float: right;
+  margin-top: 25px;
+  text-decoration: none;
+  color: white;
+}
+.next2 {
+  margin-left: 5px;
+  float: right;
+  margin-top: 15px;
+  text-decoration: none;
+  color: white;
+}
+.main::-webkit-scrollbar {
+
+  display: none;
+}
+
+
+
+.prev2 {
+  margin-right: 5px;
+  float: left;
+  margin-top: 25px;
+  text-decoration: none;
+  color: white;
+}
+.prev1 {
+  margin-right: 5px;
+  float: left;
+  margin-top: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+
+.prev2:hover.next2:hover {
+  color: white;
+  /* height: 100%; */
+  text-decoration: none;
+
+  /* //background-color: rgba(0,0,0,0.8); */
+}
+
+/* .row
+{
+  overflow-x:scroll;
+} */
+@media only screen and (max-width: 768px) {
+
+  .prev2,
+  .next2 {
+    display: none;
+  }
+
+
+}
+
+.button-group {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.button-group button {
+  width: 200px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  margin-bottom: 10px; /* Adjust the margin between buttons as needed */
+}

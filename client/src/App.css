@@ -1,0 +1,534 @@
+.window {
+  width: 100%;
+  margin: auto;
+  font-family: 'Varela Round', sans-serif;
+
+}
+
+
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+
+.selected-answer {
+  background-color: yellow;
+  /* Set your desired background color */
+}
+
+.content {
+  /* flex: 1;
+  
+  float: right;
+  height: 98vh;
+  width: 90vw;
+  padding-right: 50px; */
+  margin: auto;
+  background-image: url(./Images/25235.jpg);
+  background-size: cover;
+  height: 600px;  
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.HomePage {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+.app {
+  background-image: url(./Images/spotlights-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  
+}
+
+
+/* Set the background color for window size less than 500px */
+@media only screen and (max-width: 700px) {
+  .content{
+    
+    background-color: #050404; 
+  }
+
+  .answer-button{
+    color: #000000;
+  }
+  .app {
+    background-image: none;
+    background-color: #050404; /* Replace with your desired background color */
+  }
+#clock{
+  width:50px;
+  height: 50px;
+  font-size: 30px;
+  border-width: 1px;
+}
+}
+
+#warOfMindsLogo{
+  color: rgb(178, 33, 171);
+  font-family: 'Moirai One', cursive;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.exit{
+  background:none ;
+  border-radius: 15px;
+  padding: 10%;
+}
+
+.profileImageConainer {
+  text-align: center;
+}
+
+#question {
+  size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#questionId {
+  color: rgb(8, 8, 8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding:1%;
+  background-color: #f013b9;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+}
+.button-players-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.TopPlayersTitle{
+  margin: auto;
+  font-size: 35px;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  font-weight: 500;
+  color: rgb(55, 255, 0);
+  margin:30px;
+}
+
+/* .button-players-container button {
+  margin-right: 10px; /* Adjust the spacing between the button and PlayersInGame component */
+/* } */
+.ratingText {
+  size: 20px;
+  color: red;
+}
+
+.profileInputEdit {
+  border: none;
+  outline: none;
+  width: 90%;
+}
+
+#profileButton {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  background-image: url('./Images/user (1).png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.enterToGameButton {
+  margin: auto;
+  border-radius: 20px;
+  background: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.4);
+  font-size: 40px;
+  margin-top: 300px;
+  color: aqua;
+}
+
+.myHistory {
+  border-radius: 15px;
+
+}
+
+.MyHistoryTable {
+  overflow: auto;
+  height: 200px;
+}
+
+.waitingRoomTitle {
+  margin: auto;
+  font-size: 40px;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  color: darkorange;
+}
+
+.waitings {
+  border-radius: 30px;
+  font-family: 'Varela Round', sans-serif;
+  padding: 15px;
+  color: white;
+  list-style: none;
+  text-align: center;
+  margin: auto;
+}
+
+.waitingsElement {
+  padding: 3px;
+  margin: 10px;
+  border-bottom: 1px solid white;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.waitingRoomDetails {
+  color: white;
+  margin: auto;
+  border: none;
+  text-align: center;
+}
+
+.containerDet {
+  margin: auto;
+}
+
+.subjectButtons {
+  color: white;
+  background-color: yellow;
+}
+
+.WarOfMindsTitle {
+  margin: auto;
+  font-size: 50px;
+  font-family: 'Moirai One', cursive;
+  text-align: center;
+}
+
+.containerWaitings {
+  padding: 20px;
+  border: 3px solid yellow;
+  width: 300px;
+  border-radius: 30px;
+  margin: auto;
+  text-align: center;
+}
+
+.WaitingsTitle {
+  text-align: center;
+  margin: auto;
+  color: red;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Varela Round', sans-serif;
+
+}
+
+.subjectOfRoom {
+  font-size: 30px;
+  font-weight: 500;
+  margin: auto;
+  color: green;
+}
+
+#ratingAvg {
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  margin: auto;
+}
+
+#startGame {
+  text-align: center;
+  font-size: 25px;
+  background-color: rgb(254, 48, 216);
+  color: white;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+#SpanSubjectExplaination {
+  font-size: 25px;
+  color: orange;
+  font-weight: 500;
+}
+
+.DivSubjectExplaination {
+  margin: auto;
+  text-align: center;
+}
+
+.side-navbar {
+  position: fixed;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.side-navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.side-navbar li {
+  padding: 10px;
+  cursor: pointer;
+
+}
+
+.side-navbar li:hover {
+  background-color: #555;
+}
+
+.app-container {
+  /* position: relative; */
+  font-family: 'Varela Round', sans-serif;
+  background-image: url(./Images/25235.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width:100%;
+  height: 100%;
+}
+
+.subjects-container {
+  display: flex;
+  overflow-x: hidden;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.subjects {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subjects li {
+  margin-right: 10px;
+}
+
+.subjectForChoosing {
+  background-color: none;
+  border: white 1px solid;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.selectedSubject {
+  background-color: orange;
+}
+
+.questionPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  /* height: 100vh;  */
+  padding: 10%;
+  padding-top: 2%;
+  width: 70%;
+  margin: auto;
+}
+
+#question {
+  margin-top: 2%;
+  font-weight: 500;
+  color: white;
+}
+
+.answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 2%;
+}
+
+.answer-button {
+  border: 2px solid transparent;  
+  padding: 15px;
+  width: 100%;
+  height:120%;
+  color: rgb(255, 255, 255);
+
+  background: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.selected-answer {
+  background-color: lightblue;
+}
+
+.my-custom-div {
+  margin-top: 20px;
+}
+
+.AlreadyAnswered {
+  border-radius: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  background-color: rgb(240, 9, 9);
+  color: rgb(79, 242, 19);
+  margin-top: 20px;
+  text-align: center;
+}
+
+#theFastestTitle {
+  color: greenyellow;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.theFastest {
+  border-radius: 20%;
+  margin-top: 10%;
+  padding: 5%;
+  border: 4px white solid;
+  background-color: black;
+  color: yellow;
+}
+
+.progressBar {
+  width: 50%;
+  height: 20px;
+  background-color: lightgray;
+  margin-top: 20px;
+  margin: 30px;
+}
+
+.ProgressBarContainer {
+  width: 70%;
+  margin-top: 30px;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: lightblue;
+}
+
+button {
+  /* position: absolute; */
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: lightgray;
+  border: none;
+  cursor: pointer;
+}
+
+.correct-answer {
+  background-color: black;
+  color: white;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.abouteDiv {
+  width: 70%;
+  margin: auto;
+  padding: 30px;
+}
+
+.SubjectTitle {
+   margin: auto;
+  margin-top:0px;
+ 
+  font-size: 35px;
+  /* font-family: 'Moirai One', cursive; */
+  text-align: center;
+}
+
+#clock {
+  float: right;
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1% solid white;
+}
+
+.clock-text {
+  font-size: 40px;
+  color: white;
+}
+
+
+.horizontal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  height: 80px; /* Adjust the height as needed */
+  padding: 20px;
+}
+
+.cont {
+  display: flex;
+  align-items: center;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the gap between the two divs */
+}
+.ratingResults{
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  border: 4px white solid;
+  background-color: black;
+  color: yellow;
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 80px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
