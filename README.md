@@ -3,7 +3,7 @@
 
 ## Overview
 
-"War of Minds" is an interactive and engaging multiplayer game designed to challenge players' strategic thinking and problem-solving skills. The project includes a .NET Core-based server and a React-based client.
+"War of Minds" is an interactive and engaging multiplayer game designed to challenge players' strategic thinking and problem-solving skills. The project includes a .NET Core-based server, a React-based client, and an SQL Server database. The game features an ELO rating system to rank players based on their performance.
 
 ## Repository Structure
 
@@ -20,13 +20,14 @@ Ensure you have the following installed on your system:
 
 - .NET Core SDK
 - Node.js and npm
+- SQL Server
 
 ### Installation
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/war-of-minds.git
+   git clone https://github.com/ShoshiSternberg/war-of-minds.git
    cd war-of-minds
    ```
 
@@ -42,6 +43,20 @@ Ensure you have the following installed on your system:
    ```bash
    cd ../client
    npm install
+   ```
+
+4. **Setup SQL Server Database:**
+
+   - Ensure SQL Server is installed and running.
+   - Create a new database named `WarOfMinds`.
+   - Update the connection string in the `appsettings.json` file in the `server` directory to point to your SQL Server instance.
+
+   Example connection string:
+
+   ```json
+   "ConnectionStrings": {
+       "DefaultConnection": "Server=your_server_name;Database=WarOfMinds;User Id=your_user_id;Password=your_password;"
+   }
    ```
 
 ### Running the Application
@@ -62,6 +77,15 @@ Ensure you have the following installed on your system:
 
    The client will typically be available at `http://localhost:3000`.
 
+### Database Migrations
+
+If you need to apply database migrations, you can use the following commands in the `server` directory:
+
+```bash
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+```
+
 ## Project Structure
 
 ### Server
@@ -69,8 +93,11 @@ Ensure you have the following installed on your system:
 The server is built with .NET Core and follows a clean architecture with distinct layers for entities, interfaces, and repositories. Key components include:
 
 - **Entities**: Define the core data models.
-- **Interfaces**: Abstract the data access layer, facilitating easier testing and dependency injection.
+- **Controllers**: Handle HTTP requests and responses.
+- **Services**: Contain the business logic.
 - **Repositories**: Implement data access logic, interacting with the database via Entity Framework Core.
+- **Interfaces**: Abstract the data access layer, facilitating easier testing and dependency injection.
+- **DTOs (Data Transfer Objects)**: Used for data exchange between the server and client.
 
 ### Client
 
@@ -81,6 +108,10 @@ The client is a React application designed to provide an intuitive user interfac
 - **Game Lobby**: Enable users to create or join game rooms.
 - **Gameplay**: Manage real-time interactions during the game using WebSockets.
 
+### ELO Rating System
+
+The ELO rating system is implemented to rank players based on their performance in games. Players earn or lose points based on the outcome of matches against other players, with adjustments made according to the relative skill levels of the opponents.
+
 ## Features
 
 - **User Registration and Login**: Secure authentication mechanism.
@@ -88,6 +119,7 @@ The client is a React application designed to provide an intuitive user interfac
 - **Game Lobby**: Users can create or join game rooms.
 - **Real-time Gameplay**: Interactive gameplay with real-time updates.
 - **ELO Rating System**: Implemented to rank players based on their performance.
+- **SQL Server Integration**: The application uses SQL Server to manage and store game and user data.
 
 ## Contributing
 
