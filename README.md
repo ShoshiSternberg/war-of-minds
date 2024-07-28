@@ -92,12 +92,11 @@ dotnet ef database update
 
 The server is built with .NET Core and follows a clean architecture with distinct layers for entities, interfaces, and repositories. Key components include:
 
-- **Entities**: Define the core data models.
-- **Controllers**: Handle HTTP requests and responses.
-- **Services**: Contain the business logic.
+- **context**: Define the core data definitions.
 - **Repositories**: Implement data access logic, interacting with the database via Entity Framework Core.
-- **Interfaces**: Abstract the data access layer, facilitating easier testing and dependency injection.
-- **DTOs (Data Transfer Objects)**: Used for data exchange between the server and client.
+- **Common [DTOs (Data Transfer Objects)]**: Used for data exchange between the server and client.
+- **Services**: Contain the business logic, including the elo rating calculator.
+- **WebApi**: Handle HTTP requests and responses by the controllers, including the game logic in the signalR directory.
 
 ### Client
 
@@ -127,7 +126,7 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Acknowledgements
 
